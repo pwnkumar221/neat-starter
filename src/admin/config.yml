@@ -26,8 +26,8 @@ collections:
         name: "author"
         widget: "relation"
         collection: "authors"
-        search_fields: ["name.first"]
-        value_field: "name.first"
+        search_fields: ["fullname"]
+        value_field: "fullname"
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
@@ -44,7 +44,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Name", name: "first", widget: "string" }
+      - { label: "Name", name: "fullname", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
 
   - label: "Pages"
