@@ -1,8 +1,20 @@
 ---
-layout: pages
+title: "Welcome to Pages"
+pagination: 
+    data: collections.page
+    size: 2
+    alias: pages
 ---
 
-<section class="mt-15">
+<ul>
+    {% for page in pages %}
+        <li><a href={{ page.data.href }}>{{ page.data.title }}</a></li>
+    {% endfor %}
+</ul>
 
-    
-</section>
+{% if pagination.href.previous %}
+    <a href={{pagination.href.previous}}>Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+    <a href={{pagination.href.next}}>Next Page</a>
+{% endif %}
