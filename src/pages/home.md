@@ -8,4 +8,4 @@ heroCarousel:
   - /static/img/bgimage.jpg
   - /static/img/bgimage.jpg
 ---
-Home
+Home Page
