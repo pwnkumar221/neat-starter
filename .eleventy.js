@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
 
   // works also with addLiquidShortcode or addJavaScriptFunction
   eleventyConfig.addNunjucksAsyncShortcode("responsiveimage", async function(src, alt, sizes = "100vw") {
+    console.log("test");
     if(alt === undefined) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
