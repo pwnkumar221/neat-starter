@@ -26,6 +26,7 @@
   "dependencies": {
     "@11ty/eleventy-img": "^0.6.0",
     "autoprefixer": "^10.1.0",
+    "netlify-cms": "^2.10.82",
     "node-sass-promise": "^1.0.0",
     "postcss": "^8.2.1"
   }
