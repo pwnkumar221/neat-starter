@@ -1,0 +1,13 @@
+---
+layout: default
+prism: true
+---
+
+<div class="container">
+    {% set pageslist = collections.page %}
+    {% for pagecontent in pageslist %}
+        {% if pagecontent.data.heroCarousel %}
+                {% include 'modules/hero-carousel/hero-carousel.html' %}
+        {% endif %}
+    {% endfor %}    
+</div>
