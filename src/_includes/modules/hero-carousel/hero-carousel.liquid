@@ -1,0 +1,10 @@
+{% if heroCarousel %}
+    <div class="row">
+        <div class="col-12">
+            <h2>Carousel</h2>
+            {% for heroImg in heroCarousel %}
+                {% responsiveimage heroImg, 'test-image', '(min-width: 30em) 50vw, 100vw' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

@@ -4,7 +4,8 @@ prism: true
 ---
 
 <div class="container">
-    {% if heroCarousel %}
-        {% include 'modules/hero-carousel/hero-carousel.html' %}
-    {% endif %}
+    <!-- hero carousel css -->
+    {% include 'static/css/hero-carousel.css' %}
+    <!-- hero carousel component -->
+    {% include 'modules/hero-carousel/hero-carousel.liquid' %}
 </div>

@@ -32,7 +32,6 @@ module.exports = function (eleventyConfig) {
 
   // works also with addLiquidShortcode or addJavaScriptFunction
   eleventyConfig.addNunjucksAsyncShortcode("responsiveimage", async function(src, alt, sizes = "100vw") {
-    console.log("test");
     if(alt === undefined) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
@@ -41,12 +40,13 @@ module.exports = function (eleventyConfig) {
     let metadata = await Image(src, {
       widths: [300, 600],
       formats: ['webp', 'jpeg'],
-      urlPath: "./src/static/img/",
+      urlPath: "/static/img",
       outputDir: "./dist/static/img"
     });
 
     let lowsrc = metadata.jpeg[0];
-
+    // console.log(lowsrc);
+    lowsrc.url = lowsrc.url;
     return `<picture>
       ${Object.values(metadata).map(imageFormat => {
         return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
@@ -55,7 +55,9 @@ module.exports = function (eleventyConfig) {
           src="${lowsrc.url}"
           width="${lowsrc.width}"
           height="${lowsrc.height}"
-          alt="${alt}">
+          alt="${alt}"
+          loading="lazy"
+          decoding="async">
       </picture>`;
   });
 
