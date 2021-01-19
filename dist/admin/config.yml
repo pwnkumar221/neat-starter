@@ -87,8 +87,6 @@ collections:
     name: "products"
     folder: "src/products"
     create: true
-    editor:
-      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Description", name: "description", widget: "string" }
@@ -97,8 +95,8 @@ collections:
         name: "author"
         widget: "relation"
         collection: "authors"
-        search_fields: ["name.first"]
-        value_field: "name.first"
+        search_fields: ["fullname"]
+        value_field: "fullname"
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Specifications", name: "specifications", widget: "markdown" }
       - widget: select
