@@ -31,12 +31,12 @@ collections:
         value_field: "fullname"
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
+      - label: "tags"
+        widget: "list"
         name: "tags"
-        multiple: true
-        create: true
+        add_to_top: true
         allow_add: true
+        field: {label:}
   
 # authors fields
   - label: "Authors"
@@ -55,6 +55,7 @@ collections:
 
   - label: "Pages"
     name: "pages"
+    create: true
     editor:
       preview: false
     files:
@@ -86,6 +87,9 @@ collections:
   - label: "Products"
     name: "products"
     folder: "src/products"
+    create: true
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Description", name: "description", widget: "string" }
@@ -98,12 +102,12 @@ collections:
         value_field: "fullname"
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Specifications", name: "specifications", widget: "markdown" }
-      - widget: select
-        label: "tags"
+      - label: "tags"
+        widget: "list"
         name: "tags"
-        multiple: true
-        create: true
+        add_to_top: true
         allow_add: true
+        field: {label:}
       - widget: "image"
         label: "Thumbnail"
         name: "thumbnail"
@@ -176,12 +180,12 @@ collections:
         collection: "authors"
         search_fields: ["name.first"]
         value_field: "name.first"
-      - widget: select
-        label: "tags"
+      - label: "tags"
+        widget: "list"
         name: "tags"
-        multiple: true
-        create: true
+        add_to_top: true
         allow_add: true
+        field: {label:}
       - label: "Thumbnail Image"
         name: "thumbnailImage"
         widget: "image"
