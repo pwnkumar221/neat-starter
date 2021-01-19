@@ -36,7 +36,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        allow_add: true
   
 # authors fields
   - label: "Authors"
@@ -86,7 +86,6 @@ collections:
   - label: "Products"
     name: "products"
     folder: "src/products"
-    create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Meta Description", name: "description", widget: "string" }
@@ -104,7 +103,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        allow_add: true
       - widget: "image"
         label: "Thumbnail"
         name: "thumbnail"
@@ -182,7 +181,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        allow_add: true
       - label: "Thumbnail Image"
         name: "thumbnailImage"
         widget: "image"
