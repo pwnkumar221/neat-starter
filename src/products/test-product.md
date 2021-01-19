@@ -6,10 +6,8 @@ author: Test
 specifications: Lorem Ipsum
 tags:
   - created
-thumbnail: /static/img/icon.svg
-heroImage: /static/img/icon.svg
-productImages:
-  - /static/img/bgimage.jpg
-  - /static/img/bgimage.jpg
+thumbnail: src/static/img/christmas.jpg
+heroImage: src/static/img/christmas.jpg
+productImages: []
 ---
 Lorem Ipsum
