@@ -60,7 +60,6 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        identifier_field: name
         file: "src/pages/home.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
@@ -72,7 +71,6 @@ collections:
 
       - label: "About"
         name: "about"
-        identifier_field: name
         file: "src/pages/about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
