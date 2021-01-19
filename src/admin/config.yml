@@ -36,7 +36,6 @@ collections:
         name: "tags"
         add_to_top: true
         allow_add: true
-        field: {label:}
   
 # authors fields
   - label: "Authors"
@@ -107,7 +106,6 @@ collections:
         name: "tags"
         add_to_top: true
         allow_add: true
-        field: {label:}
       - widget: "image"
         label: "Thumbnail"
         name: "thumbnail"
@@ -185,7 +183,6 @@ collections:
         name: "tags"
         add_to_top: true
         allow_add: true
-        field: {label:}
       - label: "Thumbnail Image"
         name: "thumbnailImage"
         widget: "image"
