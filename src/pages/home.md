@@ -8,5 +8,6 @@ heroCarousel:
   - src/static/img/bgimage.jpg
   - src/static/img/bgimage.jpg
   - /static/img/1st-image-mobile.jpg
+  - /static/img/bgimage.jpg
 ---
 Home Page
