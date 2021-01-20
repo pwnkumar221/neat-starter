@@ -38,9 +38,9 @@ npm run serve
 
 ## Making changes in the backend
 
-#### 1\. Open config.yml file located inside /src/admin folder.
+#### 1\. Open ```/src/admin/config.yml``` file.
 
-#### 2\. Add custom fieldsm here and save it will reflect in the local backend.
+#### 2\. Add custom fields here and save it will reflect in the local backend.
 
 ## Reflect changes in the netlify backend
 
@@ -54,7 +54,7 @@ git push origin main
 
 ## How to use 11ty plugins
 
-#### 1\. Open .eleventy.js file and include plugin. 
+#### 1\. Open ```.eleventy.js``` file and include plugin. 
 
 #### 2\. Now use shortcode anywhere ith the code it will process that shortcode and replace it with the output.
 
