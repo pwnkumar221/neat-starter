@@ -93,10 +93,10 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         multiple: true
-      - label: "Product Types"
-        name: "product-types"
+      - label: "Product Type"
+        name: "product-type"
         widget: "relation"
-        collection: "product-types"
+        collection: "product-type"
         search_fields: ["title"]
         value_field: "title"
         multiple: true
@@ -108,7 +108,6 @@ collections:
         value_field: "title"
         multiple: true
       
-
 # product type
   - label: "Product Type"
     name: "product-type"
