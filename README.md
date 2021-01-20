@@ -3,12 +3,12 @@
 Starter Template for building static websites.
 
 # Folder structure
-   1. -- /dist                   : static files for deployment will generate here
-   2. -- /src/data               : it include settings, links, navigation yaml file which will be generated from the backend  
-   3. -- /src/includes/          : contains layout of the page and modules
-   4. -- /src/includes/modules   : create modules for the website
-   5. -- /src/includes/partials  : header, navbar, footer etc. modules.
-   5. -- /src/admin              : contains files to modify backend 
+   1. -- /dist : static files for deployment will generate here
+   2. -- /src/data : it include settings, links, navigation yaml file which will be generated from the backend  
+   3. -- /src/includes : contains layout of the page and modules
+   4. -- /src/includes/modules : create modules for the website
+   5. -- /src/includes/partials : header, navbar, footer etc. modules.
+   5. -- /src/admin : contains files to modify backend 
 
 ## Getting Started
 
