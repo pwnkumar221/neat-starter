@@ -31,11 +31,12 @@ collections:
         value_field: "fullname"
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "tags"
-        widget: "list"
+      - label: "Tags"
         name: "tags"
-        add_to_top: true
-        allow_add: true
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
   
 # authors fields
   - label: "Authors"
@@ -47,11 +48,20 @@ collections:
     fields:
       - { label: "Name", name: "fullname", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+
+# tags fields
+  - label: "Tags"
+    name: "tags"
+    folder: "src/tags"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
 
   
 # page fields
-
   - label: "Pages"
     name: "pages"
     create: true
@@ -101,11 +111,12 @@ collections:
         value_field: "fullname"
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Specifications", name: "specifications", widget: "markdown" }
-      - label: "tags"
-        widget: "list"
+      - label: "Tags"
         name: "tags"
-        add_to_top: true
-        allow_add: true
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
       - widget: "image"
         label: "Thumbnail"
         name: "thumbnail"
@@ -178,11 +189,12 @@ collections:
         collection: "authors"
         search_fields: ["name.first"]
         value_field: "name.first"
-      - label: "tags"
-        widget: "list"
+      - label: "Tags"
         name: "tags"
-        add_to_top: true
-        allow_add: true
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
       - label: "Thumbnail Image"
         name: "thumbnailImage"
         widget: "image"
