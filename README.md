@@ -28,4 +28,30 @@ npm run build
 npm run serve
 ```
 
+## Making changes in the backend
+
+### 1\. Open config.yml file located inside /src/admin folder.
+
+### 2\. Add custom fieldsm here and save it will reflect in the local backend.
+
+## Reflect changes in the netlify backend
+
+### 1\. Push the files with the changes 
+
+```
+git push origin main
+````
+
+### 2\. Netlify will automatically run the build command and deploy the website. 
+
+## How to use 11ty plugins
+
+### 1\. Open .eleventy.js file and include plugin 
+
+
+
+
+
+
+
 
