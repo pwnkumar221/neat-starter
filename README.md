@@ -51,6 +51,8 @@ git push origin main
 ### 2\. Now use shortcode anywhere ith the code it will process that shortcode and replace it with the output.
 
 ## Image auto compress
-Please use this shortcode {% responsiveimage src, alt, sizes %} in place of img tag.
 
+```
+Please use this shortcode {% responsiveimage src, alt, sizes %} in place of img tag.
+```
 
