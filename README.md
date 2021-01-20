@@ -1,47 +1,28 @@
-# Neat Starter
+# Eleventy Template
 
-Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS
+Starter Template for building static websites.
 
-## Live Demo
-
-[https://neat-starter.netlify.app/](https://neat-starter.netlify.app/)
-
-### Technologies used:
-
-- [Netlify CMS](https://www.netlifycms.org/)
-- [Eleventy](https://www.11ty.dev/)
-- [Alpine.js](https://github.com/alpinejs/alpine)
-- [Tailwind CSS](https://tailwindcss.com/)
-
-| ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |
-| ------------------------------------------------------------------------------------------------------------- |
-
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/surjithctly/neat-starter&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+# Folder structure
+   1. -- /dist : static files for deployment will generate here
+   2. -- /src/data : it include settings, links, navigation yaml file which will be generated from the backend  
+   3. -- /src/includes : contains layout of the page and modules
+   4. -- /src/includes/modules : create modules for the website
+   5. -- /src/includes/partials : header, navbar, footer etc. modules.
+   5. -- /src/admin : contains files to modify backend 
 
 ## Getting Started
 
-Detailed instructions are available in my blog. [Check it out](https://blog.surjithctly.in/neat-stack-create-a-static-website-with-netlify-cms-eleventy-alpinejs-and-tailwindcss)
+#### 1\. Clone this Repository
 
-### 1\. Clone this Repository
+#### 2\. Navigate to the directory
 
-```
-git clone https://github.com/surjithctly/neat-starter.git
-```
-
-### 2\. Navigate to the directory
-
-```
-cd neat-starter
-```
-
-### 3\. Install dependencies
+#### 3\. Install dependencies
 
 ```
 npm install
 ```
 
-### 4\. Build the project to generate the first CSS
+#### 4\. Build the project to generate the first CSS
 
 This step is only required the very first time.
 
@@ -49,12 +30,35 @@ This step is only required the very first time.
 npm run build
 ```
 
-### 5\. Run Eleventy
+#### 5\. Run Eleventy
 
 ```
-npm run start
+npm run serve
 ```
 
-## Author
+## Making changes in the backend
 
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
+#### 1\. Open ```/src/admin/config.yml``` file.
+
+#### 2\. Add custom fields here and save it will reflect in the local backend.
+
+## Reflect changes in the netlify backend
+
+#### 1\. Push the files with the changes 
+
+```
+git push origin main
+````
+
+#### 2\. Netlify will automatically run the build command and deploy the website. 
+
+## How to use 11ty plugins
+
+#### 1\. Open ```.eleventy.js``` file and include plugin. 
+
+#### 2\. Now use shortcode anywhere ith the code it will process that shortcode and replace it with the output.
+
+## Image auto compress
+
+use this shortcode ```{% responsiveimage src, alt, sizes %}``` in place of img tag.
+
