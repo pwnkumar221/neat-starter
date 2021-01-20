@@ -55,4 +55,3 @@ git push origin main
 ```
 use this shortcode {% responsiveimage src, alt, sizes %} in place of img tag.
 ```
-
