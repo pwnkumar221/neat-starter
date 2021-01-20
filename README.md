@@ -60,6 +60,5 @@ git push origin main
 
 ## Image auto compress
 
-```
-use this shortcode {% responsiveimage src, alt, sizes %} in place of img tag.
-```
+use this shortcode ```{% responsiveimage src, alt, sizes %}``` in place of img tag.
+
