@@ -13,55 +13,6 @@ local_backend: true
 # publish_mode: editorial_workflow
 collections:
 
-# blogs fields
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - label: "Author"
-        name: "author"
-        widget: "relation"
-        collection: "authors"
-        search_fields: ["fullname"]
-        value_field: "fullname"
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Tags"
-        name: "tags"
-        widget: "relation"
-        collection: "tags"
-        search_fields: ["title"]
-        value_field: "title"
-        multiple: true
-  
-# authors fields
-  - label: "Authors"
-    name: "authors"
-    folder: "src/authors"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Name", name: "fullname", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
-
-# tags fields
-  - label: "Tags"
-    name: "tags"
-    folder: "src/tags"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-
-  
 # page fields
   - label: "Pages"
     name: "pages"
@@ -130,12 +81,121 @@ collections:
         media_library:
           config:
             multiple: false
-
       - label: "Product Images"
         name: "productImages"
         widget: "list"
         summary: '{{fields.image}}'
         field: {label: Image, name: image, widget: image}
+      - label: "Product Tags"
+        name: "product-tags"
+        widget: "relation"
+        collection: "product-tags"
+        search_fields: ["title"]
+        value_field: "title"
+        multiple: true
+      - label: "Product Types"
+        name: "product-types"
+        widget: "relation"
+        collection: "product-types"
+        search_fields: ["title"]
+        value_field: "title"
+        multiple: true
+      - label: "Product Collection"
+        name: "product-collection"
+        widget: "relation"
+        collection: "product-collection"
+        search_fields: ["title"]
+        value_field: "title"
+        multiple: true
+      
+
+# product type
+  - label: "Product Type"
+    name: "product-type"
+    folder: "src/product-type"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+# product collection
+  - label: "Product Collection"
+    name: "product-collection"
+    folder: "src/product-collection"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+# product tags
+  - label: "Product Tags"
+    name: "product-tags"
+    folder: "src/product-tags"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+# blogs fields
+  - label: "Blog"
+    name: "blog"
+    folder: "src/posts"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["fullname"]
+        value_field: "fullname"
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
+        multiple: true
+  
+# authors fields
+  - label: "Authors"
+    name: "authors"
+    folder: "src/authors"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "fullname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+
+# tags fields
+  - label: "Tags"
+    name: "tags"
+    folder: "src/tags"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+# keywords fields
+  - label: "Keywords"
+    name: "keywords"
+    folder: "src/keywords"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
 
 # announcements fields
   - label: "Announcements"
@@ -162,7 +222,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Thumbnail Image"
         name: "thumbnailImage"
@@ -181,7 +241,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "string" }
       - label: "Author"
         name: "author"
         widget: "relation"
