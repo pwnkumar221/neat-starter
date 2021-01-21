@@ -42,6 +42,63 @@ npm run serve
 
 #### 2\. Add custom fields here and save it will reflect in the local backend.
 
+#### Collections
+All editable content types are defined in the ```collections``` field of your ```config.yml``` file, and display in the left sidebar of the Content page of the editor UI.
+For eg:
+``` 
+collections:
+  - label: "Blog"
+    name: "blog"
+    folder: "_posts/blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+```
+Refer: https://www.netlifycms.org/docs/collection-types/
+
+#### File collections
+A files collection contains one or more uniquely configured files. Unlike items in folder collections, which repeat the same configuration over all files in the folder, each item in a files collection has an explicitly set path, filename, and configuration. This can be useful for unique files with a custom set of fields, like a settings file or a custom landing page with a unique content structure.
+For eg:
+```
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "site/content/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
+```
+Refer: https://www.netlifycms.org/docs/collection-types/#file-collections
+
+#### Field Type
+```- {label: "Description", name: "description", widget: "text"}```
+Refer: https://www.netlifycms.org/docs/widgets/
+
 ## Reflect changes in the netlify backend
 
 #### 1\. Push the files with the changes 
